@@ -1,0 +1,60 @@
+/* general rules */
+body {
+  margin: 0;
+  padding: 0;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+/* header section */
+.topSection {
+  padding: 0 4%;
+  justify-content: space-between;
+}
+nav {
+  margin-right: 100px;
+  padding-right: 100px;
+  position: relative;
+}
+nav > a {
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}
+
+.filtreSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* main section */
+
+/* top mainsection */
+
+.midpage {
+  padding: 2%;
+  justify-content: space-between;
+}
+.hebergement {
+  width: 60%;
+  border-radius: 30px;
+}
+aside {
+}
+.hebergement,
+.activités {
+  background-color: rgb(189, 189, 189);
+  padding: 30px;
+}
+
+.box {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
