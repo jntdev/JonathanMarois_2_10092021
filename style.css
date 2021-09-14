@@ -22,10 +22,9 @@ nav {
   padding-right: 100px;
   position: relative;
 }
-nav > a {
-  /* position: absolute;
-  top: 0;
-  right: 0; */
+
+.HeaderBottomSection {
+  padding: 2%;
 }
 
 .filtreSection {
@@ -35,26 +34,192 @@ nav > a {
 }
 /* main section */
 
+.box {
+  padding: 5px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 /* top mainsection */
 
 .midpage {
   padding: 2%;
   justify-content: space-between;
+  height: 600px;
 }
 .hebergement {
   width: 60%;
+  height: 100%;
   border-radius: 30px;
 }
 aside {
+  width: 30%;
+  border-radius: 30px;
 }
 .hebergement,
-.activités {
-  background-color: rgb(189, 189, 189);
-  padding: 30px;
+aside,
+footer {
+  background-color: #f2f2f2;
 }
 
-.box {
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.hebergement,
+.activités,
+aside {
+  padding: 0 2%;
+}
+
+/* hebergement section */
+
+.hebergement > .container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 76%;
+}
+
+.hebergement > .container > .box {
+  width: 245px;
+  height: 185px;
+}
+
+.vue {
+  width: 100%;
+  height: 60%;
+  border-radius: 15px 15px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.vueh1 {
+  background-image: url(images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+}
+.vueh2 {
+  background-image: url(images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+}
+.vueh3 {
+  background-image: url(images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+}
+.vueh4 {
+  background-image: url(images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+}
+.vueh5 {
+  background-image: url(images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+}
+.vueh6 {
+  background-image: url(images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+}
+
+/* Aside section */
+aside > .container {
+  height: 83%;
+  justify-content: space-between;
+}
+
+aside > .container > .box {
+  width: 97%;
+  height: 130px;
+}
+
+.popvue {
+  width: 30%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.poph1 {
+  background-image: url(images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+}
+.poph2 {
+  background-image: url(images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg);
+}
+.poph3 {
+  background-image: url(images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+}
+
+/* Section Bottom */
+.activites {
+  height: 600px;
+  padding: 2%;
+}
+.activité > .container {
+  padding: 2%;
+  width: 100%;
+}
+
+.activites > .container > .content {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.activitybox {
+  padding: 0px;
+  width: 22%;
+  height: 400px;
+}
+
+.Activue {
+  width: 100%;
+  height: 85%;
+  border-radius: 15px 15px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.boxB {
+  height: 55%;
+  margin-bottom: 10%;
+}
+
+.boxC {
+  height: 35%;
+}
+
+.boxD {
+  height: 45%;
+  margin-bottom: 10%;
+}
+.boxE {
+  height: 45%;
+}
+
+.activue1 {
+  background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+}
+
+.activue2 {
+  height: 75%;
+  background-image: url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+
+.activue3 {
+  height: 66%;
+  background-image: url(images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+}
+
+.activue4 {
+  background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+}
+.activue5 {
+  height: 70%;
+  background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+}
+.activue6 {
+  height: 70%;
+  background-image: url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+
+/* Footer section */
+footer {
+  justify-content: flex-start;
+  padding: 2% 2% 5% 2%;
+}
+
+.footercontent {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
 }
