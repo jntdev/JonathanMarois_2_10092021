@@ -154,8 +154,11 @@ aside > .container > .box {
   justify-content: space-around;
 }
 
-.activitybox {
+.pad0 {
   padding: 0px;
+}
+
+.activitybox {
   width: 22%;
   height: 400px;
 }
