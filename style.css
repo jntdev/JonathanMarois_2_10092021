@@ -1,8 +1,39 @@
 /* general rules */
-body {
-  margin: 0;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap");
+
+:root {
+  /* typography */
+  --primeFontFam: "Raleway", sans-serif;
+  --primefontWei: 400;
+  --secondaryFontWei: 100;
+  --thirdFontWei: 600;
+
+  --secondaryFontSize: 16px;
+
+  /* colors */
+  --grey: #f2f2f2;
+  --blue: #0065fc;
+  --lightblue: #deebff;
 }
+
+body {
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 0;
+  font-family: var(--primeFontFam);
+  font-weight: var(--primefontWei);
+}
+
+p {
+  font-weight: var(--secondaryFontWei);
+}
+
+a {
+  text-decoration: none;
+  font-weight: var(--primeFontWei);
+}
+
 .flexrow {
   display: flex;
   flex-direction: row;
@@ -15,16 +46,26 @@ body {
 /* header section */
 .topSection {
   padding: 0 4%;
+  height: 80px;
+  align-items: center;
   justify-content: space-between;
 }
 nav {
-  margin-right: 100px;
-  padding-right: 100px;
-  position: relative;
+  width: 300px;
+}
+
+nav > ul {
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav > ul > li {
+  list-style: none;
 }
 
 .HeaderBottomSection {
-  padding: 2%;
+  padding: 0 3%;
 }
 
 .search {
@@ -32,24 +73,28 @@ nav {
   height: 50px;
   background-color: rgb(255, 228, 196);
   border-radius: 15px;
-  border: solid 1px #f2f2f2;
+  border: solid 1px var(--grey);
   margin-bottom: 40px;
 }
 
 .logoSearch {
-  background-color: #f2f2f2;
+  background-color: var(--grey);
   width: 20%;
   height: 100%;
   border-radius: 15px 0 0 15px;
 }
 
 .search > input {
+  font-family: var(--primeFontFam);
+  font-size: var(--secondaryFontSize);
   width: 45%;
   border: none;
   padding-left: 4%;
 }
 
 .searchButton {
+  font-family: var(--primeFontFam);
+  font-size: var(--secondaryFontSize);
   border: none;
   border-radius: 0 15px 15px 0;
   background-color: rgb(0, 110, 255);
@@ -59,7 +104,26 @@ nav {
 .filtreSection {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filtre {
+  margin-left: 35px;
+  padding-right: 20px;
+  border-radius: 50px;
+  height: 50px;
+  background-color: white;
+  border: solid 2px var(--grey);
+  align-items: center;
+  font-weight: var(--thirdFontWei);
+}
+
+.circle {
+  background-color: var(--lightblue);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 15px 0 -15px;
 }
 /* main section */
 
@@ -89,7 +153,7 @@ aside {
 .hebergement,
 aside,
 footer {
-  background-color: #f2f2f2;
+  background-color: var(--grey);
 }
 
 .hebergement,
@@ -108,8 +172,8 @@ aside {
 }
 
 .hebergement > .container > .box {
-  width: 245px;
-  height: 185px;
+  width: 200px;
+  height: 180px;
 }
 
 .vue {
@@ -139,9 +203,14 @@ aside {
   background-image: url(images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
 }
 
+.hebergement > button {
+  border: none;
+  background-color: unset;
+  font-size: var(--secondaryFontSize);
+}
 /* Aside section */
 aside > .container {
-  height: 83%;
+  height: 79%;
   justify-content: space-between;
 }
 
@@ -207,7 +276,7 @@ aside > .container > .box {
 }
 
 .boxC {
-  height: 35%;
+  height: 39%;
 }
 
 .boxD {
@@ -215,7 +284,7 @@ aside > .container > .box {
   margin-bottom: 10%;
 }
 .boxE {
-  height: 45%;
+  height: 49%;
 }
 
 .activue1 {
@@ -247,11 +316,17 @@ aside > .container > .box {
 /* Footer section */
 footer {
   justify-content: flex-start;
-  padding: 2% 2% 5% 2%;
+  padding: 3% 2% 5% 2%;
 }
 
 .footercontent {
   width: 33%;
   display: flex;
   flex-direction: column;
+}
+
+.footercontent > a {
+  color: black;
+  font-weight: var(--secondaryFontWei);
+  margin-bottom: 15px;
 }
