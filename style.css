@@ -17,7 +17,7 @@
 }
 
 body {
-  max-width: 1200px;
+  max-width: 1400px;
 
   margin: 0 auto;
   padding: 0;
@@ -32,6 +32,24 @@ p {
 a {
   text-decoration: none;
   font-weight: var(--primeFontWei);
+  color: black;
+}
+
+.inscription {
+  color: var(--blue);
+}
+
+h2 {
+  width: 100%;
+}
+
+h3 {
+  width: 100%;
+  font-size: 15px;
+}
+
+span {
+  font-weight: var(--primefontWei);
 }
 
 .flexrow {
@@ -44,14 +62,34 @@ a {
 }
 
 /* header section */
-.topSection {
+header {
   padding: 0 4%;
   height: 80px;
   align-items: center;
   justify-content: space-between;
 }
+
 nav {
-  width: 300px;
+  overflow: hidden;
+}
+
+nav > ul > li > a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 1px solid transparent;
+}
+
+a.active {
+  color: var(--blue);
+}
+
+nav a.active {
+  border-top: solid 1px var(--blue);
 }
 
 nav > ul {
@@ -69,12 +107,17 @@ nav > ul > li {
 }
 
 .search {
+  justify-content: flex-end;
   width: 400px;
   height: 50px;
-  background-color: rgb(255, 228, 196);
+  background-color: var(--grey);
   border-radius: 15px;
   border: solid 1px var(--grey);
   margin-bottom: 40px;
+}
+
+.search > i {
+  margin: 15px 23px 0 0;
 }
 
 .logoSearch {
@@ -119,44 +162,70 @@ nav > ul > li {
 }
 
 .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--lightblue);
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin: 0 15px 0 -15px;
 }
+
+.circle > i {
+  color: var(--blue);
+}
+
+.infocircle {
+  color: var(--blue);
+}
 /* main section */
+.fa-star {
+  color: var(--blue);
+}
 
 .box {
+  position: relative;
   padding: 5px;
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.content {
+  padding-left: 5%;
+}
+
+.hebstar {
+  position: absolute;
+  top: 175px;
+}
+
 /* top mainsection */
 
 .midpage {
+  display: flex;
+  flex-wrap: wrap;
   padding: 2%;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 600px;
 }
-.hebergement {
+#hebergement {
   width: 60%;
   height: 100%;
   border-radius: 30px;
 }
 aside {
-  width: 30%;
+  width: 376px;
   border-radius: 30px;
 }
-.hebergement,
+#hebergement,
 aside,
 footer {
   background-color: var(--grey);
 }
 
-.hebergement,
+#hebergement,
 .activités,
 aside {
   padding: 0 2%;
@@ -164,90 +233,93 @@ aside {
 
 /* hebergement section */
 
-.hebergement > .container {
+#hebergement > .container {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   height: 76%;
 }
 
-.hebergement > .container > .box {
-  width: 200px;
-  height: 180px;
+#hebergement > .container > .box {
+  width: 235px;
+  height: 187px;
 }
 
 .vue {
   width: 100%;
   height: 60%;
   border-radius: 15px 15px 0 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-.vueh1 {
-  background-image: url(images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
-}
-.vueh2 {
-  background-image: url(images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
-}
-.vueh3 {
-  background-image: url(images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg);
-}
-.vueh4 {
-  background-image: url(images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
-}
-.vueh5 {
-  background-image: url(images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
-}
-.vueh6 {
-  background-image: url(images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
-}
 
-.hebergement > button {
+#hebergement > button {
   border: none;
   background-color: unset;
   font-size: var(--secondaryFontSize);
 }
 /* Aside section */
+.titleAside {
+  padding: 0 5%;
+  align-items: center;
+}
+
 aside > .container {
   height: 79%;
   justify-content: space-between;
+  padding: 2%;
 }
 
 aside > .container > .box {
-  width: 97%;
+  width: 345px;
   height: 130px;
 }
 
+.content > h3,
+.content > p {
+  padding: 0;
+  margin: 6px 0 0 0;
+}
+
+.asidecontent {
+  position: relative;
+  width: 60%;
+  padding: 0 5%;
+}
+.asidecontent > p {
+  padding: 0;
+  margin: 0;
+}
+.asidecontent > h3 {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.asidecontent > .stars {
+  position: absolute;
+  bottom: 5px;
+}
+
 .popvue {
-  width: 30%;
+  width: 33%;
   height: 100%;
   border-radius: 15px 0 0 15px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.poph1 {
-  background-image: url(images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
-}
-.poph2 {
-  background-image: url(images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg);
-}
-.poph3 {
-  background-image: url(images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
-}
 
 /* Section Bottom */
-.activites {
+#activites {
   height: 600px;
-  padding: 2%;
-}
-.activité > .container {
-  padding: 2%;
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.activites > .container > .content {
+#activites > .content {
   width: 100%;
   justify-content: space-around;
 }
@@ -257,7 +329,7 @@ aside > .container > .box {
 }
 
 .activitybox {
-  width: 22%;
+  width: 308px;
   height: 400px;
 }
 
@@ -270,6 +342,11 @@ aside > .container > .box {
   background-repeat: no-repeat;
 }
 
+.bottomcontent {
+  width: 1400px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .boxB {
   height: 55%;
   margin-bottom: 10%;
@@ -315,18 +392,42 @@ aside > .container > .box {
 
 /* Footer section */
 footer {
+  text-align: justify;
   justify-content: flex-start;
-  padding: 3% 2% 5% 2%;
+  padding: 3% 2% 2% 2%;
+}
+
+footer > ul {
+  width: 75%;
+  list-style: none;
+  justify-content: space-between;
+}
+
+li > h2 {
+  font-size: 20px;
+}
+
+.footercontent > li {
+  margin-top: 10%;
 }
 
 .footercontent {
+  padding: 0;
+  list-style: none;
+}
+
+/* .footercontent {
   width: 33%;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .footercontent > a {
   color: black;
   font-weight: var(--secondaryFontWei);
   margin-bottom: 15px;
+}
+
+.grey {
+  color: rgb(209, 209, 209);
 }
