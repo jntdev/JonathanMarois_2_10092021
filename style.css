@@ -25,6 +25,10 @@ body {
   font-weight: var(--primefontWei);
 }
 
+img {
+  object-fit: cover;
+}
+
 p {
   font-weight: var(--secondaryFontWei);
 }
@@ -102,7 +106,7 @@ nav > ul > li {
   list-style: none;
 }
 
-.HeaderBottomSection {
+.Topsection {
   padding: 0 3%;
 }
 
@@ -130,6 +134,8 @@ nav > ul > li {
 .search > input {
   font-family: var(--primeFontFam);
   font-size: var(--secondaryFontSize);
+  font-weight: 600;
+  color: black;
   width: 45%;
   border: none;
   padding-left: 4%;
@@ -138,10 +144,12 @@ nav > ul > li {
 .searchButton {
   font-family: var(--primeFontFam);
   font-size: var(--secondaryFontSize);
+  font-weight: 500;
   border: none;
   border-radius: 0 15px 15px 0;
   background-color: rgb(0, 110, 255);
   width: 35%;
+  color: white;
 }
 
 .filtreSection {
@@ -212,7 +220,7 @@ nav > ul > li {
 }
 #hebergement {
   width: 60%;
-  height: 100%;
+
   border-radius: 30px;
 }
 aside {
@@ -226,9 +234,10 @@ footer {
 }
 
 #hebergement,
-.activités,
+.activites,
 aside {
   padding: 0 2%;
+  position: relative;
 }
 
 /* hebergement section */
@@ -254,10 +263,13 @@ aside {
   background-repeat: no-repeat;
 }
 
-#hebergement > button {
+.seemore {
+  position: absolute;
+  bottom: 40px;
   border: none;
   background-color: unset;
   font-size: var(--secondaryFontSize);
+  font-weight: 600;
 }
 /* Aside section */
 .titleAside {
@@ -316,7 +328,6 @@ aside > .container > .box {
   padding: 3%;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 #activites > .content {
@@ -333,13 +344,39 @@ aside > .container > .box {
   height: 400px;
 }
 
+/* .activitybox > h3 {
+  padding: 0;
+  margin: 0;
+} */
+
 .Activue {
   width: 100%;
   height: 85%;
   border-radius: 15px 15px 0 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.pad0 > h3 {
+  padding-left: 6%;
+}
+
+.Activue_B {
+  height: 70%;
+  object-position: center 45%;
+}
+
+.Activue_C {
+  height: 65%;
+  object-position: center 20%;
+}
+
+.Activue_D {
+  height: 68%;
+  object-position: center 30%;
+}
+
+.Activue_E {
+  height: 68%;
+  object-position: center 35%;
 }
 
 .bottomcontent {
@@ -348,12 +385,12 @@ aside > .container > .box {
   justify-content: space-around;
 }
 .boxB {
-  height: 55%;
+  height: 50%;
   margin-bottom: 10%;
 }
 
 .boxC {
-  height: 39%;
+  height: 42%;
 }
 
 .boxD {
@@ -361,33 +398,7 @@ aside > .container > .box {
   margin-bottom: 10%;
 }
 .boxE {
-  height: 49%;
-}
-
-.activue1 {
-  background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
-}
-
-.activue2 {
-  height: 75%;
-  background-image: url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
-}
-
-.activue3 {
-  height: 66%;
-  background-image: url(images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
-}
-
-.activue4 {
-  background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
-}
-.activue5 {
-  height: 70%;
-  background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
-}
-.activue6 {
-  height: 70%;
-  background-image: url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+  height: 47%;
 }
 
 /* Footer section */
@@ -430,4 +441,35 @@ li > h2 {
 
 .grey {
   color: rgb(209, 209, 209);
+}
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+  main {
+    flex-wrap: wrap;
+  }
+  #hebergement {
+    width: 50%;
+    height: 830px;
+  }
+  #hebergement > .container > .box {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1060px) {
+  #hebergement {
+    width: 500px;
+  }
+}
+/* @media (max-width: 750px) { */
+/* #hebergement { */
+/* width: %; */
+/* } */
+/* } */
+@media (max-width: 532px) {
+  #hebergement {
+    width: 240px;
+  }
 }
