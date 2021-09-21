@@ -56,6 +56,10 @@ span {
   font-weight: var(--primefontWei);
 }
 
+.pad0 {
+  padding: 0px;
+}
+
 .flexrow {
   display: flex;
   flex-direction: row;
@@ -85,14 +89,10 @@ nav > ul > li > a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  border-bottom: 1px solid transparent;
 }
 
-a.active {
+nav > ul > li :hover {
   color: var(--blue);
-}
-
-nav a.active {
   border-top: solid 1px var(--blue);
 }
 
@@ -121,7 +121,7 @@ nav > ul > li {
 }
 
 .search > i {
-  margin: 15px 23px 0 0;
+  margin: 15px 20px 0 0;
 }
 
 .logoSearch {
@@ -136,7 +136,7 @@ nav > ul > li {
   font-size: var(--secondaryFontSize);
   font-weight: 600;
   color: black;
-  width: 45%;
+  width: 50%;
   border: none;
   padding-left: 4%;
 }
@@ -153,9 +153,14 @@ nav > ul > li {
 }
 
 .filtreSection {
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+
+.filtretype {
+  flex-wrap: wrap;
 }
 
 .filtre {
@@ -185,7 +190,9 @@ nav > ul > li {
 }
 
 .infocircle {
-  color: var(--blue);
+  border: solid 1px grey;
+  border-radius: 50%;
+  padding: 1%;
 }
 /* main section */
 .fa-star {
@@ -216,10 +223,11 @@ nav > ul > li {
   flex-wrap: wrap;
   padding: 2%;
   justify-content: space-around;
-  height: 600px;
+  height: auto;
 }
 #hebergement {
   width: 60%;
+  height: 600px;
 
   border-radius: 30px;
 }
@@ -265,7 +273,7 @@ aside {
 
 .seemore {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   border: none;
   background-color: unset;
   font-size: var(--secondaryFontSize);
@@ -324,7 +332,6 @@ aside > .container > .box {
 
 /* Section Bottom */
 #activites {
-  height: 600px;
   padding: 3%;
   display: flex;
   flex-wrap: wrap;
@@ -335,19 +342,10 @@ aside > .container > .box {
   justify-content: space-around;
 }
 
-.pad0 {
-  padding: 0px;
-}
-
 .activitybox {
   width: 308px;
   height: 400px;
 }
-
-/* .activitybox > h3 {
-  padding: 0;
-  margin: 0;
-} */
 
 .Activue {
   width: 100%;
@@ -468,8 +466,62 @@ li > h2 {
 /* width: %; */
 /* } */
 /* } */
-@media (max-width: 532px) {
+@media (max-width: 550px) {
+  body {
+    position: relative;
+  }
+  h1 {
+    margin-top: 50px;
+  }
+  .absolute {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  nav {
+    width: 100%;
+  }
+
+  nav > ul {
+    justify-content: space-around;
+  }
+
+  .respNav {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border-bottom: solid 2px var(--grey);
+  }
+
+  nav > ul > li :hover {
+    border-bottom: solid 2px var(--blue);
+  }
+
+  nav > ul > li :hover {
+    width: 100%;
+    border-top: transparent;
+  }
+  .midpage {
+    padding: 0;
+  }
+
   #hebergement {
-    width: 240px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .footerlist {
+    flex-direction: column;
+    padding: 0 0 0 10%;
+  }
+
+  li > h2 {
+    margin-top: 50px;
+  }
+  #footerlist > li {
+    margin-top: 5%;
   }
 }
