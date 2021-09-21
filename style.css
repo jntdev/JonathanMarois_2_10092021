@@ -459,6 +459,10 @@ li > h2 {
 @media (max-width: 1060px) {
   #hebergement {
     width: 500px;
+    height: auto;
+  }
+  #activites {
+    height: auto;
   }
 }
 /* @media (max-width: 750px) { */
