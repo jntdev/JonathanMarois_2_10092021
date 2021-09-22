@@ -380,11 +380,18 @@ aside > .container > .box {
 .bottomcontent {
   width: 1400px;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.splitter {
+  width: 50%;
+  min-width: 650px;
+  display: flex;
   justify-content: space-around;
 }
 .boxB {
   height: 50%;
-  margin-bottom: 10%;
+  margin-bottom: 23px;
 }
 
 .boxC {
@@ -393,7 +400,7 @@ aside > .container > .box {
 
 .boxD {
   height: 45%;
-  margin-bottom: 10%;
+  margin-bottom: 23px;
 }
 .boxE {
   height: 47%;
@@ -443,6 +450,12 @@ li > h2 {
 
 /* Media Queries */
 
+@media (max-width: 1382px) {
+  .splitter {
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 1300px) {
   main {
     flex-wrap: wrap;
@@ -465,17 +478,55 @@ li > h2 {
     height: auto;
   }
 }
-/* @media (max-width: 750px) { */
-/* #hebergement { */
-/* width: %; */
-/* } */
-/* } */
+
+@media (max-width: 680px) {
+  .splitter {
+    width: 100%;
+    min-width: unset;
+    flex-wrap: wrap;
+    margin-bottom: unset;
+    margin-bottom: 30px;
+  }
+
+  .activitybox {
+    align-items: center;
+  }
+
+  .splitter > .box,
+  .boxB,
+  .boxC,
+  .boxD,
+  .boxE {
+    padding: 0;
+    margin-bottom: 30px;
+    width: 456px;
+    height: 200px;
+  }
+
+  .activitybox {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .Activue,
+  .Activue_B,
+  .Activue_C,
+  .Activue_D,
+  .Activue_E {
+    height: 140px;
+  }
+
+  /* .activitybox > .box {
+    width: 95%;
+    height: auto;
+  } */
+}
+
 @media (max-width: 550px) {
   body {
     position: relative;
   }
   h1 {
-    margin-top: 50px;
+    margin-top: px;
   }
   .absolute {
     position: absolute;
