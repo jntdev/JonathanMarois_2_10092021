@@ -59,6 +59,9 @@ span {
 .pad0 {
   padding: 0px;
 }
+.flex {
+  display: flex;
+}
 
 .flexrow {
   display: flex;
@@ -219,7 +222,7 @@ nav > ul > li {
 /* top mainsection */
 
 .midpage {
-  display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   padding: 2%;
   justify-content: space-around;
@@ -478,8 +481,57 @@ li > h2 {
     height: auto;
   }
 }
+@media (max-width: 991px) {
+  #hebergement,
+  aside {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    /* align-items: center; */
+  }
+
+  #hebergement > .container {
+    justify-content: space-around;
+  }
+
+  aside > .container {
+    align-items: center;
+    height: 450px;
+    padding: 0;
+  }
+
+  .midpage {
+    padding: 0;
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 680px) {
+  .midpage {
+    padding: 0;
+    margin: 0;
+  }
+  #hebergement,
+  aside {
+    width: 100%;
+
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  #hebergement > .container {
+    margin: 0 auto;
+  }
+
+  #box {
+    width: 456px;
+  }
+
+  .vue {
+    object-position: 0 70%;
+  }
+
   .splitter {
     width: 100%;
     min-width: unset;
