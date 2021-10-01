@@ -18,7 +18,7 @@
 
 body {
   max-width: 1400px;
-
+  width: 100vw;
   margin: 0 auto;
   padding: 0;
   font-family: var(--primeFontFam);
@@ -72,7 +72,7 @@ span {
   flex-direction: column;
 }
 
-/* header section */
+/* ********** HEADER ********** */
 header {
   padding: 0 4%;
   height: 80px;
@@ -126,7 +126,7 @@ nav > ul > li {
 .search > i {
   margin: 15px 20px 0 0;
 }
-
+/* ********** TOP SECTION ********** */
 .logoSearch {
   background-color: var(--grey);
   width: 20%;
@@ -197,7 +197,7 @@ nav > ul > li {
   border-radius: 50%;
   padding: 1%;
 }
-/* main section */
+/* ********** MAIN PAGE ********** */
 .fa-star {
   color: var(--blue);
 }
@@ -219,9 +219,10 @@ nav > ul > li {
   top: 175px;
 }
 
-/* top mainsection */
+/* ********** MID PAGE ********** */
 
 .midpage {
+  width: 100%;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   padding: 2%;
@@ -251,12 +252,11 @@ aside {
   position: relative;
 }
 
-/* hebergement section */
+/* ********** HEBERGEMENT ********** */
 
 #hebergement > .container {
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
   height: 76%;
 }
 
@@ -282,7 +282,7 @@ aside {
   font-size: var(--secondaryFontSize);
   font-weight: 600;
 }
-/* Aside section */
+/* ********** ASIDE ********** */
 .titleAside {
   padding: 0 5%;
   align-items: center;
@@ -333,7 +333,7 @@ aside > .container > .box {
   background-repeat: no-repeat;
 }
 
-/* Section Bottom */
+/* ********** ACTIVITES ********** */
 #activites {
   padding: 3%;
   display: flex;
@@ -381,7 +381,7 @@ aside > .container > .box {
 }
 
 .bottomcontent {
-  width: 1400px;
+  max-width: 1400px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -392,6 +392,7 @@ aside > .container > .box {
   display: flex;
   justify-content: space-around;
 }
+
 .boxB {
   height: 50%;
   margin-bottom: 23px;
@@ -409,7 +410,7 @@ aside > .container > .box {
   height: 47%;
 }
 
-/* Footer section */
+/* ********** FOOTER ********** */
 footer {
   text-align: justify;
   justify-content: flex-start;
@@ -435,12 +436,6 @@ li > h2 {
   list-style: none;
 }
 
-/* .footercontent {
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-} */
-
 .footercontent > a {
   color: black;
   font-weight: var(--secondaryFontWei);
@@ -462,6 +457,9 @@ li > h2 {
 @media (max-width: 1300px) {
   main {
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #hebergement {
     width: 50%;
@@ -479,28 +477,36 @@ li > h2 {
   }
   #activites {
     height: auto;
+    flex-direction: column;
   }
 }
 @media (max-width: 991px) {
+  section {
+    width: 100vw;
+  }
+
   #hebergement,
   aside {
     width: 100%;
     border-radius: 0;
     padding: 0;
     margin: 0;
-    /* align-items: center; */
   }
 
-  #hebergement > .container {
+  #hebergement > .container,
+  aside > .container {
     justify-content: space-around;
   }
 
   aside > .container {
     align-items: center;
-    height: 450px;
+    height: 500px;
     padding: 0;
   }
 
+  aside > .container > .box {
+    width: 456px;
+  }
   .midpage {
     padding: 0;
     flex-direction: column;
@@ -514,18 +520,12 @@ li > h2 {
   }
   #hebergement,
   aside {
-    width: 100%;
-
     border-radius: 0;
     margin: 0 auto;
   }
 
   #hebergement > .container {
     margin: 0 auto;
-  }
-
-  #box {
-    width: 456px;
   }
 
   .vue {
@@ -566,7 +566,9 @@ li > h2 {
   .Activue_E {
     height: 140px;
   }
-
+  #hebergement > .container > #box {
+    width: 456px;
+  }
   /* .activitybox > .box {
     width: 95%;
     height: auto;
@@ -630,5 +632,15 @@ li > h2 {
   }
   #footerlist > li {
     margin-top: 5%;
+  }
+
+  #hebergement > .container > #box,
+  aside > .container > #box,
+  .splitter > .box,
+  .boxB,
+  .boxC,
+  .boxD,
+  .boxE {
+    width: 95%;
   }
 }
