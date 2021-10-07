@@ -18,7 +18,6 @@
 
 body {
   max-width: 1400px;
-  width: 100vw;
   margin: 0 auto;
   padding: 0;
   font-family: var(--primeFontFam);
@@ -43,12 +42,7 @@ a {
   color: var(--blue);
 }
 
-h2 {
-  width: 100%;
-}
-
 h3 {
-  width: 100%;
   font-size: 15px;
 }
 
@@ -94,10 +88,10 @@ nav > ul > li > a {
   font-size: 17px;
 }
 
-nav > ul > li :hover {
+/* nav > ul > li :hover {
   color: var(--blue);
   border-top: solid 1px var(--blue);
-}
+} */
 
 nav > ul {
   padding: 0;
@@ -110,7 +104,11 @@ nav > ul > li {
 }
 
 .Topsection {
+  margin-top: 2%;
   padding: 0 3%;
+}
+.Topsection > p {
+  width: 80%;
 }
 
 .search {
@@ -156,10 +154,10 @@ nav > ul > li {
 }
 
 .filtreSection {
+  width: 80%;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 
 .filtretype {
@@ -222,7 +220,6 @@ nav > ul > li {
 /* ********** MID PAGE ********** */
 
 .midpage {
-  width: 100%;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   padding: 2%;
@@ -261,7 +258,7 @@ aside {
 }
 
 #hebergement > .container > .box {
-  width: 235px;
+  min-width: 235px;
   height: 187px;
 }
 
@@ -286,6 +283,7 @@ aside {
 .titleAside {
   padding: 0 5%;
   align-items: center;
+  justify-content: space-between;
 }
 
 aside > .container {
@@ -295,7 +293,6 @@ aside > .container {
 }
 
 aside > .container > .box {
-  width: 345px;
   height: 130px;
 }
 
@@ -346,7 +343,7 @@ aside > .container > .box {
 }
 
 .activitybox {
-  width: 308px;
+  width: 45%;
   height: 400px;
 }
 
@@ -412,7 +409,7 @@ aside > .container > .box {
 
 /* ********** FOOTER ********** */
 footer {
-  text-align: justify;
+  text-align: start;
   justify-content: flex-start;
   padding: 3% 2% 2% 2%;
 }
@@ -428,7 +425,7 @@ li > h2 {
 }
 
 .footercontent > li {
-  margin-top: 10%;
+  margin-top: 10px;
 }
 
 .footercontent {
@@ -440,10 +437,6 @@ li > h2 {
   color: black;
   font-weight: var(--secondaryFontWei);
   margin-bottom: 15px;
-}
-
-.grey {
-  color: rgb(209, 209, 209);
 }
 
 /* Media Queries */
@@ -459,11 +452,10 @@ li > h2 {
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   #hebergement {
     width: 50%;
-    height: 830px;
+    height: auto;
   }
   #hebergement > .container > .box {
     margin-bottom: 50px;
@@ -472,17 +464,20 @@ li > h2 {
 
 @media (max-width: 1060px) {
   #hebergement {
-    width: 500px;
-    height: auto;
+    min-width: 500px;
   }
+
   #activites {
     height: auto;
     flex-direction: column;
   }
 }
 @media (max-width: 991px) {
-  section {
-    width: 100vw;
+  .titleAside {
+    padding: 0 5%;
+  }
+  #hebergement > h2 {
+    padding-left: 5%;
   }
 
   #hebergement,
@@ -491,6 +486,13 @@ li > h2 {
     border-radius: 0;
     padding: 0;
     margin: 0;
+  }
+  aside > .container > .box {
+    width: 50%;
+  }
+
+  #hebergement > .container {
+    padding: 2%;
   }
 
   #hebergement > .container,
@@ -504,24 +506,40 @@ li > h2 {
     padding: 0;
   }
 
-  aside > .container > .box {
-    width: 456px;
-  }
   .midpage {
     padding: 0;
     flex-direction: column;
+  }
+
+  footer > ul {
+    width: 90%;
+  }
+}
+
+@media (max-width: 850px) {
+  .footerlist {
+    flex-direction: column;
+    padding: 0 0 0 10%;
+  }
+  .footerlist {
+    justify-content: space-around;
+  }
+  .footerlist > li {
+    margin-top: 10px;
+    width: 50%;
+    margin-bottom: 60px;
   }
 }
 
 @media (max-width: 680px) {
   .midpage {
-    padding: 0;
     margin: 0;
   }
   #hebergement,
   aside {
     border-radius: 0;
     margin: 0 auto;
+    min-width: unset;
   }
 
   #hebergement > .container {
@@ -551,7 +569,7 @@ li > h2 {
   .boxE {
     padding: 0;
     margin-bottom: 30px;
-    width: 456px;
+    width: 80%;
     height: 200px;
   }
 
@@ -567,7 +585,10 @@ li > h2 {
     height: 140px;
   }
   #hebergement > .container > #box {
-    width: 456px;
+    width: 77%;
+  }
+  aside > .container > .box {
+    width: 74%;
   }
   /* .activitybox > .box {
     width: 95%;
@@ -579,9 +600,11 @@ li > h2 {
   body {
     position: relative;
   }
-  h1 {
-    margin-top: px;
+
+  .Topsection {
+    margin-top: 10%;
   }
+
   .absolute {
     position: absolute;
     right: 0px;
@@ -605,13 +628,13 @@ li > h2 {
     border-bottom: solid 2px var(--grey);
   }
 
-  nav > ul > li :hover {
-    border-bottom: solid 2px var(--blue);
+  .respNav :hover {
+    border-color: var(--blue);
   }
 
   nav > ul > li :hover {
     width: 100%;
-    border-top: transparent;
+    border-top: unset;
   }
   .midpage {
     padding: 0;
@@ -622,16 +645,8 @@ li > h2 {
     width: 100%;
   }
 
-  .footerlist {
-    flex-direction: column;
-    padding: 0 0 0 10%;
-  }
-
   li > h2 {
     margin-top: 50px;
-  }
-  #footerlist > li {
-    margin-top: 5%;
   }
 
   #hebergement > .container > #box,
@@ -641,6 +656,18 @@ li > h2 {
   .boxC,
   .boxD,
   .boxE {
-    width: 95%;
+    width: 80%;
+  }
+  .search {
+    width: 80%;
+  }
+
+  .search > input {
+    width: 65%;
+  }
+
+  .searchButton {
+    width: 20%;
+    border-radius: 15px;
   }
 }
