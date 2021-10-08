@@ -746,7 +746,7 @@ li > h2 {
     margin-left: 13px;
   }
   .search > i {
-    margin: 15px 15px 0 0px;
+    margin: auto;
   }
   .magnifying {
     visibility: visible;
