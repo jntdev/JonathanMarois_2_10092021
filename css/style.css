@@ -218,7 +218,7 @@ nav > ul {
   color: var(--blue);
 }
 
-.fa-info {
+#circleinfo {
   display: flex;
   justify-content: center;
   align-items: center;
