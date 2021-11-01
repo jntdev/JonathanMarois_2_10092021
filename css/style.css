@@ -5,8 +5,8 @@
   /* typography */
   --primeFontFam: "Raleway", sans-serif;
   --primefontWei: 400;
-  --secondaryFontWei: 100;
-  --thirdFontWei: 600;
+  --secondaryFontWei: 300;
+  --thirdFontWei: 500;
 
   --secondaryFontSize: 16px;
 
@@ -34,16 +34,19 @@ p {
 
 a {
   text-decoration: none;
-  font-weight: var(--primeFontWei);
+  font-weight: 300;
   color: black;
 }
 
 .inscription {
   color: var(--blue);
 }
-
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
 h3 {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 span {
@@ -112,6 +115,10 @@ nav > ul {
 .Topsection {
   margin-top: 2%;
   padding: 0 3%;
+}
+.Topsection > p,
+.circleinfo > p {
+  font-weight: var(--primefontWei);
 }
 
 .search {
@@ -190,6 +197,7 @@ nav > ul {
 }
 
 .filtre:hover {
+  color: white;
   background-color: var(--blue);
 }
 
@@ -233,6 +241,9 @@ nav > ul {
 .fa-star {
   color: var(--blue);
 }
+.grey {
+  color: rgb(201, 201, 201);
+}
 
 .box {
   position: relative;
@@ -248,7 +259,7 @@ nav > ul {
 
 .hebstar {
   position: absolute;
-  top: 175px;
+  top: 172px;
 }
 
 /* ********** MID PAGE ********** */
@@ -283,6 +294,10 @@ aside {
   position: relative;
 }
 
+.fa-chart-line {
+  font-size: 20px;
+}
+
 /* ********** HEBERGEMENT ********** */
 
 #hebergement > .container {
@@ -310,7 +325,7 @@ aside {
   bottom: 30px;
   border: none;
   background-color: unset;
-  font-size: var(--secondaryFontSize);
+  font-size: 18px;
   font-weight: 600;
 }
 /* ********** ASIDE ********** */
@@ -333,7 +348,7 @@ aside > .container > .box {
 .content > h3,
 .content > p {
   padding: 0;
-  margin: 6px 0 0 0;
+  margin: 4px 0 0 0;
 }
 
 .asidecontent {
@@ -527,7 +542,8 @@ li > h2 {
   .titleAside {
     padding: 0 5%;
   }
-  #hebergement > h2 {
+  #hebergement > h2,
+  #activites > h2 {
     padding-left: 5%;
   }
 
@@ -663,17 +679,36 @@ li > h2 {
 @media (max-width: 550px) {
   body {
     position: relative;
+    padding-top: 3%;
   }
 
   .Topsection {
     margin-top: 10%;
-    padding: 0 2% 0 5%;
+    padding: 2% 6% 6% 5%;
   }
 
-  .absolute {
+  aside {
+    padding-top: 2%;
+  }
+
+  #hebergement > .container > .box {
+    margin-bottom: 12px;
+  }
+
+  aside > .container {
+    height: 456px;
+  }
+
+  .seemore {
+    left: 22px;
+    bottom: -20px;
+  }
+
+  .liNav > .inscription {
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 20px;
+    top: 10px;
+    font-weight: bold;
   }
   header {
     flex-wrap: wrap;
@@ -707,6 +742,9 @@ li > h2 {
     border-radius: 0;
     width: 100%;
   }
+  #activites {
+    padding: 10% 0;
+  }
 
   li > h2 {
     margin-top: 50px;
@@ -719,19 +757,31 @@ li > h2 {
   .boxC,
   .boxD,
   .boxE {
-    width: 80%;
+    width: 90%;
   }
+  .splitter > .box,
+  .boxB,
+  .boxC,
+  .boxD,
+  .boxE {
+    margin-bottom: 20px;
+  }
+
+  .splitter {
+    margin-bottom: 0;
+  }
+
   .search {
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
   }
 
   .search > input {
-    width: 65%;
+    width: 70%;
   }
 
   .searchButton {
-    width: 20%;
+    width: 15%;
     border-radius: 15px;
   }
 
@@ -763,8 +813,23 @@ li > h2 {
     width: 70%;
   }
 
+  #circleinfo {
+    width: 30px;
+    height: 22px;
+  }
   .info > p {
-    padding: 1% 3%;
-    margin: 0;
+    padding: 0;
+    margin: 0 0 0 8px;
+  }
+
+  .content {
+    padding-left: 3%;
+  }
+  .footerlist > li {
+    margin-bottom: 0;
+  }
+
+  .activitybox > h3 {
+    font-size: 17px;
   }
 }
