@@ -186,8 +186,10 @@ nav > ul {
 }
 
 .filtre {
+  font-weight: 600;
+  font-size: 15px;
   margin-left: 35px;
-  padding-right: 20px;
+  padding-right: 33px;
   border-radius: 50px;
   height: 50px;
   background-color: white;
@@ -712,6 +714,7 @@ li > h2 {
   }
   header {
     flex-wrap: wrap;
+    padding: 0;
   }
   nav {
     width: 100%;
@@ -741,6 +744,7 @@ li > h2 {
   #hebergement {
     border-radius: 0;
     width: 100%;
+    padding-top: 5%;
   }
   #activites {
     padding: 10% 0;
@@ -809,8 +813,13 @@ li > h2 {
     top: 0;
   }
 
+  footer {
+    padding-top: 0;
+  }
+
   .footerlist > li {
     width: 70%;
+    margin: 0;
   }
 
   #circleinfo {
@@ -825,11 +834,12 @@ li > h2 {
   .content {
     padding-left: 3%;
   }
-  .footerlist > li {
-    margin-bottom: 0;
-  }
 
   .activitybox > h3 {
     font-size: 17px;
+  }
+
+  .logo {
+    margin-left: 25px;
   }
 }
